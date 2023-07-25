@@ -7,11 +7,13 @@
 
 h1,h2,h3,h4,h5,h6 {
     font-family: 'Libre Baskerville', serif;
+    background-color: transparent;
 }
 
 p {
     font-family: 'Lato', sans-serif;
     font-size: 16px;
+    background-color: transparent;
 }
 
 /* ------------------------------------------------------------------- */
@@ -33,6 +35,7 @@ button {
     font-size: 16px;
     color: white;
 }
+
 
 /* ------------------------------------------------------------------- */
 /* Bootstrap Component Overrides */
@@ -65,3 +68,7 @@ button {
     bottom: -100px;
 }
 
+.slide2 {
+    height: 90vh;
+    position: relative;
+}
