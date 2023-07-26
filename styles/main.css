@@ -72,3 +72,19 @@ button {
     height: 90vh;
     position: relative;
 }
+
+.accordion-button {
+    background-color: #183B2B;
+    color: white;
+}
+
+.accordion-button:not(.collapsed){ 
+    background-color: #168f34;
+    color: white;
+}
+
+.accordion-item{
+    background-color: rgba(152, 255, 178, 0.945);
+    border: 2px solid white;
+    color: black;
+}
