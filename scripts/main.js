@@ -14,6 +14,14 @@ $(document).ready(function(){
 
     // Hide the description text from the plant card
     $("#descriptionText").hide();
+    
+    // -----------------------------------------------------------------------------
+    // Wishlist Page
+
+    // When the Remove btn is clicked remove the row
+    $(".removeButton").click(function(){
+        $(this).closest("tr").remove();
+    })
 
 });
 
@@ -27,10 +35,4 @@ $(".card").click(function(){
     // Resize the plant image to fit additional content
     $(".card-img-top").toggleClass("small");
 
-})
-
-// When the Remove btn is clicked
-$("#removeButton").click(function(){
-
-    // Remove row from function
 })
