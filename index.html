@@ -10,11 +10,40 @@
     <link href="styles/main.css" rel="stylesheet">
   </head>
   <body>
+
+    <!-- ----------------------------------------------------------------------------------- -->
+    <!-- Nav Bar -->
+
+    <nav class="navbar fixed-top">
+      <div class="container">
+
+        <!-- logo -->
+        <a class="navbar-brand" href="#">
+          <img src="assets/Logo.svg">
+        </a>
+
+          <!-- Nav Items -->
+          <ul class="nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Browse</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Wishlist</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
     <!-- ----------------------------------------------------------------------------------- -->
     <!-- Carousal -->
 
     <div id="carouselExample" class="carousel slide" data-bs-theme="dark">
         <div class="carousel-inner">
+          
           <!-- Slide 1 -->
           <div class="carousel-item active">
             <div class="container">
@@ -36,12 +65,17 @@
               <div class="row full-height">
 
                 <div class="col  align-self-end">
-                  <img src="assets/Slide-2.png" class="slide2">
+                  <img src="assets/Slide-2.png" class="hero-image2">
                 </div>
 
                 <div class="col align-self-center">
                     <h1>Cultivate your paradise today and witness the magic unfold! </h1>
+
+                    <!-- ------------------------------------------------------------------------------------------------------------- -->
+                    <!-- Accordion -->
                     <div class="accordion" id="accordionExample">
+                      
+                      <!-- Accordion Item 1 -->
                       <div class="accordion-item">
                         <h2 class="accordion-header">
                           <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
@@ -54,6 +88,8 @@
                           </div>
                         </div>
                       </div>
+
+                      <!-- Accordion Item 2 -->
                       <div class="accordion-item">
                         <h2 class="accordion-header">
                           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
@@ -66,6 +102,8 @@
                           </div>
                         </div>
                       </div>
+
+                      <!-- Accordion Item 3 -->
                       <div class="accordion-item">
                         <h2 class="accordion-header">
                           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">

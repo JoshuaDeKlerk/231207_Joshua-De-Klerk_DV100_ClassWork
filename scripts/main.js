@@ -7,4 +7,3 @@ $(document).ready(function(){
     $( ".hero-image" ).animate({top: '-=100px'})
     
 });
-

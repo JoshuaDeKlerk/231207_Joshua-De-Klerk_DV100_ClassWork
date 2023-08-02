@@ -40,6 +40,22 @@ button {
 /* ------------------------------------------------------------------- */
 /* Bootstrap Component Overrides */
 
+/* Navigation */
+
+.nav-link {
+    font-family: 'Lato', sans-serif;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.nav-link:hover {
+    color: #18382B;
+}
+
+.nav-link.active {
+    border-bottom: 2px solid #18382B;
+    color: #18382B;
+}
+
 /* Carousel */
 
 .carousel-item {
@@ -61,6 +77,7 @@ button {
     left: 84px;
 }
 
+/* Slide 1 */
 
 .hero-image {
     height: 90vh;
@@ -68,10 +85,9 @@ button {
     bottom: -100px;
 }
 
-.slide2 {
-    height: 90vh;
-    position: relative;
-}
+/* Slide 2 */
+
+/* Accordion */
 
 .accordion-button {
     background-color: #183B2B;
@@ -87,4 +103,9 @@ button {
     background-color: rgba(152, 255, 178, 0.945);
     border: 2px solid white;
     color: black;
+}
+
+.hero-image2 {
+    height: 85vh;
+    position: relative;
 }
