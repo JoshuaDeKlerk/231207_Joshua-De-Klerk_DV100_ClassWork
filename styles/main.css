@@ -77,16 +77,6 @@ button {
     left: 84px;
 }
 
-/* Slide 1 */
-
-.hero-image {
-    height: 90vh;
-    position: relative;
-    bottom: -100px;
-}
-
-/* Slide 2 */
-
 /* Accordion */
 
 .accordion-button {
@@ -103,6 +93,35 @@ button {
     background-color: rgba(152, 255, 178, 0.945);
     border: 2px solid white;
     color: black;
+}
+
+/* Card */
+
+.card {
+    border-radius: 150px 150px 12px 12px;
+    background-color: #f3f3f3;
+    text-align: center;
+    height: 440px;
+    border: none;
+}
+
+.card-img-top {
+    width: auto;
+    height: 320px;
+    margin: auto;
+}
+
+.card-text {
+    color: #18382B;
+}
+
+/* ------------------------------------------------------------------- */
+/* Home Page */
+
+.hero-image {
+    height: 90vh;
+    position: relative;
+    bottom: -100px;
 }
 
 .hero-image2 {
