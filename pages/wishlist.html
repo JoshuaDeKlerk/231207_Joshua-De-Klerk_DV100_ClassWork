@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Plant Shop - Browse</title>
+
+    <!-- Styles -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link href="../styles/main.css" rel="stylesheet">
+  </head>
+  <body>
+
+    <!-- ----------------------------------------------------------------------------------- -->
+    <!-- Nav Bar -->
+
+    <nav class="navbar fixed-top">
+      <div class="container">
+
+        <!-- logo -->
+        <a class="navbar-brand" href="#">
+          <img src="../assets/Logo.svg">
+        </a>
+
+          <!-- Nav Items -->
+          <ul class="nav">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="browse.html">Browse</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link   active" href="wishlist.html">Wishlist</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ----------------------------------------------------------------------------------- -->
+    <!-- Table -->
+    <div class="container mt-5 pt-5">
+        <table class="table align-middle">
+            <thead>
+              <tr>
+                <th scope="col"><h4>Plant Image</h4></th>
+                <th scope="col"><h4>Plant Name</h4></th>
+                <th scope="col" class="remove"><h4>Remove</h4></th>
+              </tr>
+            </thead>
+            <tbody>
+              
+              <!-- Row 1 -->
+
+              <tr>
+                <th scope="row">
+                    <img src="../assets/Table/Ficus Tree.png" class="table-img">
+                </th>
+                <td>Ficus Tree</td>
+                <td class="remove">
+                    <button class="removeButton" id="removeButton">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon">
+                            <path d="M7.91992 12H15.9199M11.9199 22C17.4199 22 21.9199 17.5 21.9199 12C21.9199 6.5 17.4199 2 11.9199 2C6.41992 2 1.91992 6.5 1.91992 12C1.91992 17.5 6.41992 22 11.9199 22Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </td>
+              </tr>
+
+              <!-- Row 2 -->
+
+              <tr>
+                <th scope="row">
+                    <img src="../assets/Table/Aloe Vera.png" class="table-img">
+                </th>
+                <td>Radiant Fernwhisper</td>
+                <td class="remove">
+                    <button class="removeButton" id="removeButton">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon">
+                            <path d="M7.91992 12H15.9199M11.9199 22C17.4199 22 21.9199 17.5 21.9199 12C21.9199 6.5 17.4199 2 11.9199 2C6.41992 2 1.91992 6.5 1.91992 12C1.91992 17.5 6.41992 22 11.9199 22Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </td>
+              </tr>
+
+              <!-- Row 3 -->
+
+              <tr>
+                <th scope="row">
+                    <img src="../assets/Table/Celestial Crystalvine.png" class="table-img">
+                </th>
+                <td>Verdant Velvetleaf</td>
+                <td class="remove">
+                    <button class="removeButton" id="removeButton">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon">
+                            <path d="M7.91992 12H15.9199M11.9199 22C17.4199 22 21.9199 17.5 21.9199 12C21.9199 6.5 17.4199 2 11.9199 2C6.41992 2 1.91992 6.5 1.91992 12C1.91992 17.5 6.41992 22 11.9199 22Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </td>
+              </tr>
+
+              <!-- Row 4 -->
+
+              <tr>
+                <th scope="row">
+                    <img src="../assets/Table/Radiant Fernwhisper.png" class="table-img">
+                </th>
+                <td>Celestial Crystalvine</td>
+                <td class="remove">
+                    <button class="removeButton" id="removeButton">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon">
+                            <path d="M7.91992 12H15.9199M11.9199 22C17.4199 22 21.9199 17.5 21.9199 12C21.9199 6.5 17.4199 2 11.9199 2C6.41992 2 1.91992 6.5 1.91992 12C1.91992 17.5 6.41992 22 11.9199 22Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </td>
+              </tr>
+
+              <!-- Row 5 -->
+
+              <tr>
+                <th scope="row">
+                    <img src="../assets/Table/Verdant Velvetleaf.png" class="table-img">
+                </th>
+                <td>Aloe Vera</td>
+                <td class="remove">
+                    <button class="removeButton" id="removeButton">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon">
+                            <path d="M7.91992 12H15.9199M11.9199 22C17.4199 22 21.9199 17.5 21.9199 12C21.9199 6.5 17.4199 2 11.9199 2C6.41992 2 1.91992 6.5 1.91992 12C1.91992 17.5 6.41992 22 11.9199 22Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+    
+
+</body>
+    
+    
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="../scripts/main.js"></script>
+</body>
+</html>
