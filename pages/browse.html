@@ -44,28 +44,60 @@
         
         <h2>Browse Plants</h2>
 
+        <!-- Filters & Sorts -->
+        <div class="row">
+
+          <!-- Filter Radio buttons -->
+          <div class="btn-group col-auto" role="group" aria-label="Basic radio toggle button group">
+
+            <input type="radio" class="btn-check" name="filterRadio" id="allPlantsFilter" value="" autocomplete="off" checked>
+            <label class="btn btn-outline-success" for="allPlantsFilter">All Plants</label>
+          
+            <input type="radio" class="btn-check" name="filterRadio" id="brightLightFilter" value="bright" autocomplete="off">
+            <label class="btn btn-outline-success" for="brightLightFilter"><i class="bi bi-brightness-high"></i> Bright Light</label>
+          
+            <input type="radio" class="btn-check" name="filterRadio" id="lowLightFilter" value="low" autocomplete="off">
+            <label class="btn btn-outline-success" for="lowLightFilter"><i class="bi bi-brightness-low"></i> Low Light</label>
+
+          </div>
+
+          <!-- Sorting Radio buttons -->
+          <div class="btn-group col-auto" role="group" aria-label="Basic radio toggle button group">
+          
+            <input type="radio" class="btn-check" name="sortRadio" id="defaultSort" value="date added" autocomplete="off" checked>
+            <label class="btn btn-outline-secondary" for="defaultSort"><i class="bi bi-calendar4"></i> Newest to Oldest</label>
+          
+            <input type="radio" class="btn-check" name="sortRadio" id="priceSort" value="low to high" autocomplete="off">
+            <label class="btn btn-outline-secondary" for="priceSort"><i class="bi bi-sort-down-alt"></i> Price: Low to High</label>
+
+          </div>
+
+        </div>
+
         <!-- List of plant cards -->
 
         <div class="row py-5 gy-3" id="plantsContainer">
 
-            <!-- Browse Card Template -->
-            <template id="plantCardTemplate">
-              <div class="col-4">
+            <!-- Plants cards are appended here -->
 
-                <!-- Card -->
-                <div class="card">
-                    <img src="../assets/Plants/plant1.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title" id="nameText">Ficus Tree</h5>
-                      <p class="card-text" id="priceText">R250</p>
-                      <p class="card-text" id="descriptionText">Graceful and lush, this charming indoor plant boasts glossy, emerald-green leaves that effortlessly brightens any space. Easy to care for and standing at an ideal height, our Ficus Tree is the perfect addition to elevate your interior decor.</p>
-                    </div>
-                </div>
-              </div>
-            </template>
         </div>
     </div>
 
+    <!-- Browse Card Template -->
+    <template id="plantCardTemplate">
+      <div class="col-4">
+
+        <!-- Card -->
+        <div class="card">
+            <img src="../assets/Plants/plant1.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title" id="nameText">Ficus Tree</h5>
+              <p class="card-text" id="priceText">R250</p>
+              <p class="card-text" id="descriptionText">Graceful and lush, this charming indoor plant boasts glossy, emerald-green leaves that effortlessly brightens any space. Easy to care for and standing at an ideal height, our Ficus Tree is the perfect addition to elevate your interior decor.</p>
+            </div>
+        </div>
+      </div>
+    </template>
 </body>
     
     

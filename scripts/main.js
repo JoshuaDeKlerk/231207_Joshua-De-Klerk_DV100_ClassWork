@@ -7,33 +7,46 @@ const arrPlants = [
         name: "Ficus Tree",
         price: 350,
         description: "Graceful and lush, this charming indoor plant boasts glossy, emerald-green leaves that effortlessly brightens any space. Easy to care for and standing at an ideal height, our Ficus Tree is the perfect addition to elevate your interior decor.",
-        image: "plant1.png"
+        image: "plant1.png",
+        lightAmount: "low",
+        addedDate: "2023-03-25",
     },
     {
         name: "White Sprite Succulent",
         price: 200,
         description: "Delicate and captivating, this rare succulent showcases a mesmerizing silver-white hue that gracefully adorns its petite, fleshy leaves.",
         image: "plant2.png",
+        lightAmount: "bright",
+        addedDate: "2023-01-21",
     },
     {
         name: "Snake Plant",
         price: 400,
         description: "Boasting tall, sleek, and sword-like leaves, this botanical marvel adds a touch of modern flair to any setting.",
         image: "plant3.png",
+        lightAmount: "low",
+        addedDate: "2023-02-18",
     },
     {
         name: "Parlour Palm",
         price: 350,
         description: "With its lush, feather-like fronds and compact size, this indoor beauty makes a striking addition to any interior space.",
         image: "plant4.png",
+        lightAmount: "low",
+        addedDate: "2023-07-01",
     },
     {
         name: "Japanese Maple",
         price: 1200,
         description: "Known for its stunning foliage that transforms with the seasons, this ornamental tree captivates with its delicate, lacy leaves in vibrant shades of red, orange, or gold.",
         image: "plant5.png",
+        lightAmount: "bright",
+        addedDate: "2023-05-13",
     },
 ];
+
+let appliedFilter = "";
+let appliedSort = "date added";
 
 // -----------------------------------------------------------------------------
 // When the document loads
@@ -53,7 +66,7 @@ $(document).ready(function(){
     // Browse Page
 
     // Loads plants function
-    loadplants();
+    filterSortPlants();
 
     // -----------------------------------------------------------------------------
     // Wishlist Page
@@ -69,12 +82,18 @@ $(document).ready(function(){
 // Load all plants
 // -----------------------------------------------------------------------------
 
-function loadplants() {
+function loadPlants(plantsToShow) {
 
-    console.log(arrPlants);
+    console.log(plantsToShow);
 
-    for (let i = 0; i < arrPlants.length; i++) {
-        const plant = arrPlants[i];
+    // Clear all elements in plants container
+
+    $("#plantsContainer").empty();
+
+    // Loop through plants
+
+    for (let i = 0; i < plantsToShow.length; i++) {
+        const plant = plantsToShow[i];
 
         console.log(plant);
         
@@ -83,7 +102,7 @@ function loadplants() {
 
         
         // 2: Create a variable that contains the most recently added plant card
-        let currentChild = $("#plantsContainer").children().eq(i+1);
+        let currentChild = $("#plantsContainer").children().eq(i);
 
         // 3: Set the content for current plant card from the plants array
         $(currentChild).find("#nameText").text(plant.name);
@@ -94,9 +113,65 @@ function loadplants() {
         // 4: Hide the description text from the current card item
         $(currentChild).find("#descriptionText").hide();
 
-    }
+    };
 
 };
+
+// -----------------------------------------------------------------------------
+// When a filter or sort is clicked
+// -----------------------------------------------------------------------------
+
+$("input[name='filterRadio']").click(function() {
+    appliedFilter = $(this).attr('value');
+
+
+    console.log(appliedFilter);
+    filterSortPlants();
+});
+
+$("input[name='sortRadio']").click(function() {
+    appliedSort = $(this).attr('value');
+
+
+    console.log(appliedSort);
+    filterSortPlants();
+});
+
+function filterSortPlants() {
+
+    let filteredSortedArrPlants = [];
+
+    // Filter plants
+
+    if (appliedFilter) {
+        filteredSortedArrPlants = arrPlants.filter(plant => plant.lightAmount == appliedFilter);
+    } else {
+        filteredSortedArrPlants = arrPlants;
+    }
+
+    // Sort Plants
+
+    if (appliedSort == "low to high") {
+
+        // Sort the plants from lowest to highest price
+        filteredSortedArrPlants = filteredSortedArrPlants.sort((a,b) => {
+            return a.price - b.price;
+        });
+    }   else if (appliedSort == "date added") {
+
+        // Sort plants from newest to oldest
+        filteredSortedArrPlants = filteredSortedArrPlants.sort((a,b) => {
+            let da = new Date(a.addedDate);
+            let db = new Date(b.addedDate);
+
+            return db -da;
+        });
+    }
+
+    loadPlants(filteredSortedArrPlants);
+}
+
+
 
 // -----------------------------------------------------------------------------
 // When the plant card is clicked
