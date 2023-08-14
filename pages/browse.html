@@ -46,19 +46,23 @@
 
         <!-- List of plant cards -->
 
-        <div class="row pt-5">
-            <div class="col-4">
+        <div class="row py-5 gy-3" id="plantsContainer">
+
+            <!-- Browse Card Template -->
+            <template id="plantCardTemplate">
+              <div class="col-4">
 
                 <!-- Card -->
                 <div class="card">
-                    <img src="../assets/plant1.png" class="card-img-top" alt="...">
+                    <img src="../assets/Plants/plant1.png" class="card-img-top" alt="...">
                     <div class="card-body">
-                      <h5 class="card-title">Ficus Tree</h5>
+                      <h5 class="card-title" id="nameText">Ficus Tree</h5>
                       <p class="card-text" id="priceText">R250</p>
                       <p class="card-text" id="descriptionText">Graceful and lush, this charming indoor plant boasts glossy, emerald-green leaves that effortlessly brightens any space. Easy to care for and standing at an ideal height, our Ficus Tree is the perfect addition to elevate your interior decor.</p>
                     </div>
                 </div>
-            </div>
+              </div>
+            </template>
         </div>
     </div>
 
