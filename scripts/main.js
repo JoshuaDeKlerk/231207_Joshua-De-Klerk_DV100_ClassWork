@@ -10,6 +10,7 @@ const arrPlants = [
         image: "plant1.png",
         lightAmount: "low",
         addedDate: "2023-03-25",
+        onSale: "True",
     },
     {
         name: "White Sprite Succulent",
@@ -18,6 +19,7 @@ const arrPlants = [
         image: "plant2.png",
         lightAmount: "bright",
         addedDate: "2023-01-21",
+        onSale: "False",
     },
     {
         name: "Snake Plant",
@@ -26,6 +28,7 @@ const arrPlants = [
         image: "plant3.png",
         lightAmount: "low",
         addedDate: "2023-02-18",
+        onSale: "False",
     },
     {
         name: "Parlour Palm",
@@ -34,6 +37,7 @@ const arrPlants = [
         image: "plant4.png",
         lightAmount: "low",
         addedDate: "2023-07-01",
+        onSale: "True",
     },
     {
         name: "Japanese Maple",
@@ -42,6 +46,7 @@ const arrPlants = [
         image: "plant5.png",
         lightAmount: "bright",
         addedDate: "2023-05-13",
+        onSale: "False",
     },
 ];
 
@@ -148,6 +153,10 @@ function filterSortPlants() {
     } else {
         filteredSortedArrPlants = arrPlants;
     }
+    
+    if (appliedFilter == "onSale") {
+        filteredSortedArrPlants = arrPlants.filter(plant => plant.onSale == "True");
+    }
 
     // Sort Plants
 
@@ -166,6 +175,14 @@ function filterSortPlants() {
 
             return db -da;
         });
+    }   else if (appliedSort = "a to z") {
+
+        // Sort the plants alphabetically
+        arrPlants.sort(function(a, b){
+            if(a.name < b.name) { return -1; }
+            if(a.name > b.name) { return 1; }
+            return 0;
+        })
     }
 
     loadPlants(filteredSortedArrPlants);
